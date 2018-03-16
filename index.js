@@ -25,10 +25,9 @@ var app = {
             type: "share",         //Open a context menu and ask the user what to do next (print, mail, etc..).
             fileName: 'v8-tutorial.pdf' //it will use this filename as a place-holder
         }
-
-//         pdf.fromURL('http://cesarvr.github.io/2015/11/20/javascript-v8.html', opts)
-//         .then((status) => console.log('success->', status))
-//         .catch((error) => console.log(error));
+        pdf.fromURL('http://cesarvr.github.io/2015/11/20/javascript-v8.html', opts)
+        .then((status) => console.log('success->', status))
+        .catch((error) => console.log(error));
   // It end here
         console.log('Received Event: ' + id);
     }
