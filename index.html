@@ -39,7 +39,7 @@
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
+                <p class="event listening" onclick="myfunction()">Connecting to Device</p>
                 <p class="event received" onclick="myfunction()">Device is Ready</p>
             </div>
         </div>
@@ -48,15 +48,20 @@
         <script type="text/javascript" src="index.js"></script>
         <script>
         function myfunction(){
-          
-        
-        var opts = {
-        type: "share",         //Open a context menu and ask the user what to do next (print, mail, etc..).
-        fileName: 'v8-tutorial.pdf' //it will use this filename as a place-holder
-        }
-        pdf.fromURL('http://cesarvr.github.io/2015/11/20/javascript-v8.html', opts)
-        .then((status) => console.log('success->', status))
-        .catch((error) => console.log(error));
+          alert("out");
+          document.addEventListener('deviceready', function() {
+            alert("in");
+            var opts = {
+            type: "share",         //Open a context menu and ask the user what to do next (print, mail, etc..).
+            fileName: 'v8-tutorial.pdf' //it will use this filename as a place-holder
+            }
+//             pdf.fromURL('http://cesarvr.github.io/2015/11/20/javascript-v8.html', opts)
+//             .then((status) => console.log('success->', status))
+//             .catch((error) => console.log(error));
+              pdf.fromData( '<html> <h1>  Hello World  </h1> </html>', opts )
+                .then(()=>'ok')
+                .catch((err)=>console.err(err))
+          });
         }
         </script>
     </body>
