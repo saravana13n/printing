@@ -47,7 +47,6 @@
         <script>
         function myfunction(){
           alert("out");
-          document.addEventListener('deviceready', function() {
             alert("in");
             var opts = {
             type: "share",         //Open a context menu and ask the user what to do next (print, mail, etc..).
@@ -59,7 +58,6 @@
               pdf.fromData( '<html> <h1>  Hello World  </h1> </html>', opts )
                 .then(()=>'ok')
                 .catch((err)=>console.err(err))
-          });
         }
         </script>
     </body>
