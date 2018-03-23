@@ -20,13 +20,13 @@
        <param name="key" value="willoughby"/>
     </feature>
 
+    <preference name="phonegap-version" value="3.6.3" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     <preference name="webviewbounce"    value="false" />
 
-   <icon src="images/app-icon.png" />
-   <splash src="images/spalsh_screen.png"/>
+   <splash src="splash.png"/>
    <preference name="SplashScreenDelay" value="5000" />
 
    <plugin name="cordova-pdf-generator" spec="^2.0.1" />
